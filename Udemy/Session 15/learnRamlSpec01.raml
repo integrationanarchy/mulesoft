@@ -1,1 +1,82 @@
-
+title: learnRamlSpec
+baseUri: 'http://localhost:8081/studentapi'
+version: 1.0.1
+types: null
+/createstudent:
+  displayName: createStudent
+  description: Method created for Student Registration Information
+  post:
+    body:
+      application/json:
+        properties:
+          name?: string
+          id?: string
+          address:
+            type: string
+            required: false
+          phone?: string
+          active?: string
+          year?: string
+          semester?: string
+    responses:
+      '200':
+        body:
+          application/json:
+            example:
+              success: true
+      '400':
+        body:
+          application/json:
+            example:
+              success: fail
+              errorCode: 400
+              errorDescription: HTTP BAD ERROR
+  put:
+    body:
+      application/json:
+        properties:
+          name?: string
+          id?: string
+          address?: string
+          phone?: string
+          active?: string
+          year?: string
+          semester?: string
+    responses:
+      '200':
+        body:
+          application/json:
+            example:
+              success: true
+/retrievestudent:
+  displayName: retrieveStudent
+  description: The method is used to retrieve student information
+  get:
+    queryParameters:
+      studentID:
+        displayName: retrieveStudentID
+        description: Retrieve Student Information by Student ID
+        type: string
+        required: true
+      studentName:
+        displayName: retrieveStudentName
+        description: Retrieve Student Name Query Parameter
+        type: string
+        required: false
+    responses:
+      '200':
+        body:
+          application/json:
+            example:
+              success: true
+/deletestudent:
+  displayName: deleteStudent
+  description: Delete Student Information
+  '/{uriParameter}':
+    get:
+      responses:
+        '200':
+          body:
+            application/json:
+              example:
+                success: true
