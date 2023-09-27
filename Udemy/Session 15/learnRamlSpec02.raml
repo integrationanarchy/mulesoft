@@ -1,0 +1,111 @@
+title: learnRamlSpec
+baseUri: 'http://localhost:8081/studentapi'
+version: 1.0.1
+types:
+  StudentDataType:
+    type: object
+    properties:
+      name?: string
+      id?: string
+      address?: string
+      phone?: string
+      active?: string
+      year?: string
+      semester?: string
+  SuccessExample:
+    type: object
+    example: |
+      {
+        "result": "Success",
+        "code": 200,
+        "payload": "This is a successful result"
+      }
+  ErrorExample400:
+    type: object
+    example: |
+      {
+        "result": "failure",
+        "errorCode": 400
+      }
+  ErrorExample500:
+    type: object
+    example: |
+      {
+        "result": "failure",
+        "errorCode": 500
+      }
+/createstudent:
+  displayName: createStudent
+  description: Method created for Student Registration Information
+  post:
+    body:
+      application/json:
+        type: StudentDataType
+    responses:
+      '200':
+        body:
+          application/json:
+            type: SuccessExample
+      '400':
+        body:
+          application/json:
+            type: ErrorExample400
+      '500':
+        body:
+          application/json:
+            type: ErrorExample500
+  put:
+    body:
+      application/json:
+        type: StudentDataType
+    responses:
+      '200':
+        body:
+          application/json:
+            type: SuccessExample
+/retrievestudent:
+  displayName: retrieveStudent
+  description: The method is used to retrieve student information
+  get:
+    queryParameters:
+      studentID:
+        displayName: retrieveStudentID
+        description: Retrieve Student Information by Student ID
+        type: string
+        required: true
+      studentName:
+        displayName: retrieveStudentName
+        description: Retrieve Student Name Query Parameter
+        type: string
+        required: false
+    responses:
+      '200':
+        body:
+          application/json:
+            type: SuccessExample
+      '400':
+        body:
+          application/json:
+            type: ErrorExample400
+      '500':
+        body:
+          application/json:
+            type: ErrorExample500
+/deletestudent:
+  displayName: deleteStudent
+  description: Delete Student Information
+  '/{uriParameter}':
+    get:
+      responses:
+        '200':
+          body:
+            application/json:
+              type: SuccessExample
+        '400':
+          body:
+            application/json:
+              type: ErrorExample400
+        '500':
+          body:
+            application/json:
+              type: ErrorExample500
