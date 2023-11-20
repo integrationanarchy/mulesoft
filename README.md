@@ -5,7 +5,6 @@ Find all the required artifacts for the mulesoft learning purpose. Navigate to t
 > [!Udemy Course]
 > https://www.udemy.com/course/mulesoft-an-in-depth-extensive-tutorial-for-beginners/
 
-> [!Udemy Course]
-> https://www.udemy.com/course/mulesoft-an-in-depth-extensive-tutorial-for-beginners/
+> [!youTube Link :+1:] 
+> https://www.youtube.com/@IntegrationAnarchy/videos
 
-Also do checkout our youTube Channel :+1: https://www.youtube.com/@IntegrationAnarchy/videos
