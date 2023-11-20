@@ -7,4 +7,3 @@ Find all the required artifacts for the mulesoft learning purpose. Navigate to t
 
 > [!youTube Link :+1:] 
 > https://www.youtube.com/@IntegrationAnarchy/videos
-
