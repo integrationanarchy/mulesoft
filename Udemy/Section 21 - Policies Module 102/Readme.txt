@@ -1,0 +1,1 @@
+In the following section 21, a jar file by name: "muleCustomPolicy.jar" consists off all the required yaml configurations for the deployment/creation of the customized policies.
