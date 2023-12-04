@@ -1,0 +1,7 @@
+Please use the Maven command for the creation of the custom policy folder.
+
+Command Usage:
+
+"mvn -Parchetype-repository archetype:generate -DarchetypeGroupId=org.mule.tools -DarchetypeArtifactId=api-gateway-custom-policy-archetype -DarchetypeVersion=1.2.0 -Dpackage=mule-policy"
+
+Note: Make sure to remove the double quotes before executing.
